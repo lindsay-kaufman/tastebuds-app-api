@@ -6,7 +6,7 @@ This application allows a user to add restaurants to a favorites list as well as
 
 - [API Repo](https://github.com/lindsay-kaufman/tastebuds-app-api)
 - [Deployed API](https://dashboard.heroku.com/apps/tastebuds12345)
-- [Deployed Client] (https://lindsay-kaufman.github.io/tastebuds-app-client/)
+- [Deployed Client](https://lindsay-kaufman.github.io/tastebuds-app-client/)
 
 ## Planning Story
 In planning this application, I first created my ERD's, wrote detailed user stories and created wireframes for a logged in and logged out user. Then, I created a schedule to follow as well as a checklist of project requirements.
