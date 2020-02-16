@@ -4,7 +4,7 @@ This application allows a user to add restaurants to a favorites list as well as
 
 ## Important Links
 
-- [API Repo](https://github.com/lindsay-kaufman/tastebuds-app-api)
+- [Client Repo](https://github.com/lindsay-kaufman/tastebuds-app-client)
 - [Deployed API](https://dashboard.heroku.com/apps/tastebuds12345)
 - [Deployed Client](https://lindsay-kaufman.github.io/tastebuds-app-client/)
 
