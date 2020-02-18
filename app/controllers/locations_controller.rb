@@ -1,9 +1,12 @@
+# frozen_string_literal: true
+
 class LocationsController < ProtectedController
-  before_action :set_location, only: [:show, :update, :destroy]
+  before_action :set_location, only: %i[show update destroy]
 
   # GET /locations
   def index
-    @locations = current_user.locations.all
+    @favorites = current_user.favorites
+    @locations = Location.where.not(id: @favorites.pluck(:location_id))
 
     render json: @locations
   end
@@ -39,13 +42,14 @@ class LocationsController < ProtectedController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_location
-      @location = current_user.locations.find(params[:id])
-    end
 
-    # Only allow a trusted parameter "white list" through.
-    def location_params
-      params.require(:location).permit(:name, :cuisine, :area)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_location
+    @location = current_user.locations.find(params[:id])
+  end
+
+  # Only allow a trusted parameter "white list" through.
+  def location_params
+    params.require(:location).permit(:name, :cuisine, :area)
+  end
 end
