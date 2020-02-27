@@ -17,7 +17,6 @@ class LocationsController < ProtectedController
   end
 
   # POST /locations
-  def create
     @location = current_user.locations.build(location_params)
 
     if @location.save

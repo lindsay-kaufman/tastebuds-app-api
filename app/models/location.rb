@@ -1,3 +1,3 @@
 class Location < ApplicationRecord
-  has_many :favorites
+  # has_many :favorites
 end

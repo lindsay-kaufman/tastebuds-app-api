@@ -1,7 +1,6 @@
 class FavoriteSerializer < ActiveModel::Serializer
-  attributes :id, :notes, :editable
+  attributes :id, :google_place_name, :google_place_long, :google_place_lat, :editable
   has_one :user
-  has_one :location
 
   def editable
     scope == object.user
