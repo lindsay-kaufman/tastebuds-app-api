@@ -46,6 +46,6 @@ class FavoritesController < ProtectedController
 
     # Only allow a trusted parameter "white list" through.
     def favorite_params
-     params.require(:favorite).permit(:user_id, :google_place_id, :google_place_name, :google_place_long, :google_place_lat)
+     params.require(:favorite).permit(:user_id, :google_place_id, :google_place_name, :google_place_location, :google_formatted_address, :notes)
     end
 end
